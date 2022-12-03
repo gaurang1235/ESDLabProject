@@ -20,6 +20,7 @@ public class Employees {
     private String photograph_path;
 
     @ManyToOne
+    @JoinColumn(name = "department")
     private Departments department;
 
     public Employees(int employee_id, String first_name, String last_name, String email, String title, String photograph_path, Departments department) {

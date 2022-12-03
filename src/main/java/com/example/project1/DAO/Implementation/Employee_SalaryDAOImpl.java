@@ -4,6 +4,7 @@ import com.example.project1.BEAN.Employee_Salary;
 import com.example.project1.BEAN.Employees;
 import com.example.project1.DAO.Employee_SalaryDAO;
 import com.example.project1.Util.HibernateSessionUtil;
+import jakarta.persistence.Query;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -25,6 +26,33 @@ public class Employee_SalaryDAOImpl implements Employee_SalaryDAO {
             System.out.print(ex.getLocalizedMessage());
         }
     }
+
+//    //Extra Functionality
+//    @Override
+//    public Boolean deleteSalary(int empId) {
+//        try(Session session = HibernateSessionUtil.getSession()){
+//
+//            Transaction tx = session.beginTransaction();
+//
+//            List<Object> result1 = new ArrayList<Object>(session.createQuery("FROM Employees WHERE employee_id = :empid").setParameter("empid", empId).list());
+//
+//            if(result1.size()==0)
+//                return false;
+//
+//            Employees emp = (Employees) result1.get(0);
+//
+//            Query q = session.createQuery("delete Employee_Salary where employee_id =:empid").setParameter("empid", emp);
+//
+//            q.executeUpdate();
+//
+//            tx.commit();
+//
+//            return true;
+//        } catch(HibernateException ex){
+//            System.out.print(ex.getLocalizedMessage());
+//        }
+//        return false;
+//    }
 
     @Override
     public List<Employee_Salary> getSalary(int empId) {

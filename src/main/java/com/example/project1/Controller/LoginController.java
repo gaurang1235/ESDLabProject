@@ -29,4 +29,6 @@ public class LoginController {
         else
             return Response.ok().entity(loggedinemployee).build();
     }
+
+    //curl -d '{"email":"gaurang.agarwal@iiitb.ac.in","password":1234}' -H 'Content-Type: application/json' http://localhost:8080/Project1-1.0-SNAPSHOT/api/employee/login
 }

@@ -12,6 +12,7 @@ public class Employee_Salary {
     private int id;
 
     @ManyToOne
+    @JoinColumn(name = "employee_id")
     private Employees employee_id;
 
     @Column(nullable = false)

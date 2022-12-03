@@ -23,4 +23,18 @@ public class SalaryController {
             return Response.status(403).build();
         return Response.ok().entity(esal).build();
     }
+
+    //curl -v http://localhost:8080/Project1-1.0-SNAPSHOT/api/salary?empId=103
+
+
+    //Extra Functionality
+//    @DELETE
+//    public Response deleteSalary(@QueryParam("empId") int empId){
+//        Employee_SalaryDAO esal_Dao = new Employee_SalaryDAOImpl();
+//
+//        if(esal_Dao.deleteSalary(empId))
+//            return Response.status(200).build();
+//        else
+//            return Response.status(404).build();
+//    }
 }

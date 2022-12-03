@@ -8,4 +8,7 @@ public interface Employee_SalaryDAO {
     List<Employee_Salary> getSalary(int empId);
 
     void createSalary(Employee_Salary s);
+
+//    //Extra Functionality
+//    Boolean deleteSalary(int empId);
 }
